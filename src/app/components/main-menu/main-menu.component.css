@@ -1,0 +1,200 @@
+/* Main Menu Background */
+
+body {
+    background-image: url(../../../assets/images/main-menu-background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-y: auto;
+}
+
+
+/* Title "ELDER SCROLLS V: SKYRIM" */
+
+.main-title {
+    position: absolute;
+    width: 35%;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    user-select: none;
+}
+
+
+/* Select Menu */
+
+.menu {
+    position: absolute;
+    width: 20%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 0.5vh;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/* Menu item */
+
+.menu-item {
+    width: 70%;
+    height: calc(100%/7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.2vh solid silver;
+    background-color: rgba(70, 70, 70, 0.5);
+    position: relative;
+    transition-duration: 0.3s;
+}
+
+.menu-item:before,
+.menu-item:after {
+    content: "";
+    position: absolute;
+    width: 5%;
+    aspect-ratio: 1/1;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: rgba(70, 70, 70, 0.5);
+    border: 0.2vh solid silver;
+}
+
+.menu-item:before {
+    left: -1.3vw;
+}
+
+.menu-item:after {
+    right: -1.3vw;
+}
+
+
+/* text inside menu items */
+
+.menu-item h3 {
+    color: lightgray;
+    font-weight: 300;
+    text-decoration: none;
+    user-select: none;
+}
+
+
+/* hovering menu item */
+
+.menu-item:hover {
+    background-color: rgba(245, 245, 245, 0.2);
+}
+
+.menu-item:hover h3 {
+    color: white;
+    transition: 0.3s;
+}
+
+
+/* top and bottom menu item corner correction
+
+.menu-item:first-child {
+    border-top-left-radius: 0.5vh;
+    border-top-right-radius: 0.5vh;
+}
+
+.menu-item:last-child {
+    border-bottom-left-radius: 0.5vh;
+    border-bottom-right-radius: 0.5vh;
+}
+
+*/
+
+
+/* ICON TO THE RIGHT IN MENU
+.menu-item h2:hover:after {
+    content: " <";
+}
+ */
+
+
+/* update notes div
+
+.menu-notes {
+    position: absolute;
+    width: 50%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    bottom: 7%;
+    left: 10%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5vh;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+/* update notes title
+
+.menu-notes h3 {
+    color: whitesmoke;
+}
+
+
+/* update notes div box
+
+.menu-notes-text {
+    width: 85%;
+    height: 70%;
+    background-color: whitesmoke;
+    color: black;
+    overflow: auto;
+}
+
+
+/* update notes div box text
+
+.menu-notes-text p {
+    padding: 1vh;
+}
+
+*/
+
+
+/* tablet & phone view */
+
+@media (max-width: 768px) {
+    .main-title {
+        top: 12.5%;
+    }
+    .menu {
+        width: 90%;
+        height: 5%;
+        flex-direction: row;
+        bottom: 65%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-right: 1vh solid whitesmoke;
+    }
+    .menu-item {
+        height: 100%;
+        align-items: center;
+    }
+    .menu-item p {
+        width: 100%;
+        text-align: center;
+    }
+    /*
+    .menu-notes {
+        width: 90%;
+        height: 58%;
+        bottom: 3%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    */
+}

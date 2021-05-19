@@ -1,0 +1,40 @@
+/* Regular Skyrim Font */
+
+@font-face {
+    font-family: "Futura";
+    src: url("fonts/Futura-Lighter.ttf") format("truetype");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: "Futura";
+    src: url("fonts/Futura-Light.otf") format("truetype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Futura";
+    src: url("fonts/Futura-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Futura";
+    src: url("fonts/Futura-Bold.ttf") format("truetype");
+    font-weight: 500;
+}
+
+
+/* Old Style Skyrim Font */
+
+@font-face {
+    font-family: "Skyrim";
+    src: url("fonts/Planewalker.otf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Skyrim";
+    src: url("fonts/Planewalker-Bold.otf") format("truetype");
+    font-weight: 500;
+}

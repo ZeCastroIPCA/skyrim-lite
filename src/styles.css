@@ -11,7 +11,8 @@
     --h3-size: 1.7vw;
     /* calc(10px + 6 * ((100vw - 320px) / 680)); */
     --h4-size: calc(8px + 6 * ((100vw - 320px) / 680));
-    --p-size: calc(6px + 6 * ((100vw - 320px) / 680));
+    --p-size: 1.3vw;
+    /* calc(6px + 6 * ((100vw - 320px) / 680)); */
     --input-size: calc(5px + 6 * ((100vw - 320px) / 680));
     --button-size: calc(3px + 6 * ((100vw - 320px) / 680));
     --a-size: calc(5px + 6 * ((100vw - 320px) / 680));

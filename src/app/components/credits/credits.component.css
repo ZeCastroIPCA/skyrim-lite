@@ -19,7 +19,7 @@ body {
     left: 3%;
     border: 0.2vh solid silver;
     background-color: rgba(70, 70, 70, 0.5);
-    transition: 0.1s;
+    transition: 0.5s;
     user-select: none;
 }
 
@@ -36,14 +36,21 @@ body {
 }
 
 .back-btn:hover {
-    transition: 0.1s;
-    background-image: radial-gradient(circle, rgba(0, 0, 0, 0) 10%, rgba(255, 255, 255, 0.1) 100%);
+    transition: 0.5s;
+    background-color: rgba(245, 245, 245, 0.2);
     cursor: pointer;
 }
 
 .back-btn h3 {
+    color: lightgray;
     font-weight: 300;
-    color: whitesmoke;
+    text-decoration: none;
+    user-select: none;
+}
+
+.back-btn:hover h3 {
+    color: white;
+    transition: 0.5s;
 }
 
 .credits {
@@ -65,8 +72,8 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(70, 70, 70, 0.5);
-    border-left: 0.5vw solid whitesmoke;
-    border-right: 0.5vw solid whitesmoke;
+    border-left: 0.2vw solid whitesmoke;
+    border-right: 0.2vw solid whitesmoke;
 }
 
 .name,
@@ -75,15 +82,17 @@ body {
     height: 3%;
     display: grid;
     place-items: center;
-    color: whitesmoke;
 }
 
 .name {
-    margin-bottom: 3%;
+    margin-bottom: 5%;
 }
 
-.name h2 {
-    font-weight: 500;
+.name h2,
+.job p {
+    font-family: 'Skyrim', sans-serif;
+    color: darkgray;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
 
 .title {

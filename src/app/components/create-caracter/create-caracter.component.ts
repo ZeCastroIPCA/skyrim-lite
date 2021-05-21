@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { style } from '@angular/animations';
+import { Component, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-create-caracter',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateCaracterComponent implements OnInit {
 
-  constructor() { }
+  @Output() faction : string = ''
 
+  constructor() { }
   ngOnInit(): void {
   }
 
+  getFaction(ref:string){
+    this.faction = ref
+  }
+
+  outputTest() {
+    console.log(this.faction)
+  }
 }

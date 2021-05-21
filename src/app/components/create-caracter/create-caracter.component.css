@@ -1,6 +1,169 @@
 body {
-    background-image: url(../../../assets/images/create-background.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.background {
+    width: 110%;
+    height: 110%;
+    filter: blur(3px);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+
+/* Title */
+
+.title-box {
+    position: absolute;
+    left: 50%;
+    top: 18%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 30%;
+    height: 8%;
+    background-color: rgba(70, 70, 70, 0.5);
+    border-bottom: 0.5vh solid silver;
+    display: grid;
+    place-items: center;
+}
+
+.title-box:after {
+    content: "";
+    position: absolute;
+    width: 3%;
+    aspect-ratio: 1/1;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    background-color: silver;
+    border: 0.2vh solid silver;
+}
+
+.title-box:after {
+    top: 104%;
+}
+
+.faction-title {
+    color: lightgray;
+    font-weight: 400;
+}
+
+
+/* Factions box */
+
+.factions {
+    position: absolute;
+    left: 50%;
+    top: 42%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 85%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+input[type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.factions img {
+    width: 80%;
+    transition: 0.5s;
+}
+
+.companions {
+    filter: drop-shadow(0px 0px 1vw rgb(163, 155, 134));
+}
+
+.companions:hover {
+    filter: drop-shadow(0px 0px 2vw rgb(255, 233, 182));
+}
+
+.stormcloaks {
+    filter: drop-shadow(0px 0px 1vw rgb(110, 93, 40));
+}
+
+.stormcloaks:hover {
+    filter: drop-shadow(0px 0px 2vw rgb(255, 213, 86));
+}
+
+.thalmor {
+    filter: drop-shadow(0px 0px 1vw rgb(93, 110, 79));
+}
+
+.thalmor:hover {
+    filter: drop-shadow(0px 0px 2vw rgb(145, 209, 92));
+}
+
+.winterhold {
+    filter: drop-shadow(0px 0px 1vw rgb(126, 140, 172));
+}
+
+.winterhold:hover {
+    filter: drop-shadow(0px 0px 2vw rgb(150, 182, 255));
+}
+
+
+/* description box */
+
+.description-box {
+    position: absolute;
+    left: 50%;
+    top: 69%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 75%;
+    height: 18%;
+    display: grid;
+    place-items: center;
+    background-color: rgba(70, 70, 70, 0.5);
+    border-top: 0.5vh solid silver;
+    border-bottom: 0.5vh solid silver;
+}
+
+.description-box:before,
+.description-box:after {
+    content: "";
+    position: absolute;
+    width: 1.5%;
+    aspect-ratio: 1/1;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    background-color: silver;
+    border: 0.2vh solid silver;
+}
+
+.description-box:before {
+    top: -2%;
+}
+
+.description-box:after {
+    top: 102%;
+}
+
+.description {
+    padding-left: 10%;
+    padding-right: 10%;
+    color: lightgray;
+    font-weight: 300;
+}
+
+
+/* buttons */
+
+.back-btn,
+.next-btn {
+    bottom: 9%;
+}
+
+.back-btn {
+    left: 40%;
+}
+
+.next-btn {
+    left: 60%;
 }

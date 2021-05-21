@@ -10,47 +10,8 @@ body {
 }
 
 .back-btn {
-    position: absolute;
-    width: 10%;
-    height: 5%;
-    display: grid;
-    place-items: center;
-    top: 92%;
-    left: 3%;
-    border: 0.2vh solid silver;
-    background-color: rgba(70, 70, 70, 0.5);
-    transition: 0.5s;
-    user-select: none;
-}
-
-.back-btn:before {
-    content: "";
-    position: absolute;
-    width: 5%;
-    aspect-ratio: 1/1;
-    left: -1vw;
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
-    background-color: rgba(70, 70, 70, 0.5);
-    border: 0.2vh solid silver;
-}
-
-.back-btn:hover {
-    transition: 0.5s;
-    background-color: rgba(245, 245, 245, 0.2);
-    cursor: pointer;
-}
-
-.back-btn h3 {
-    color: lightgray;
-    font-weight: 300;
-    text-decoration: none;
-    user-select: none;
-}
-
-.back-btn:hover h3 {
-    color: white;
-    transition: 0.5s;
+    top: 94%;
+    left: 8%;
 }
 
 .credits {

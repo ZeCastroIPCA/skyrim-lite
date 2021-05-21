@@ -24,6 +24,7 @@
     box-sizing: border-box;
     outline: none;
     scroll-behavior: smooth;
+    user-select: none;
     /*font*/
     font-family: 'Futura', sans-serif;
 }
@@ -81,4 +82,62 @@ button {
 a {
     font-size: var(--a-size);
     font-weight: 400;
+}
+
+
+/* buttons */
+
+.back-btn,
+.next-btn {
+    position: absolute;
+    width: 10%;
+    height: 5%;
+    display: grid;
+    place-items: center;
+    border: 0.2vh solid silver;
+    background-color: rgba(70, 70, 70, 0.5);
+    transition: 0.5s;
+    user-select: none;
+    transform: translateX(-50%) translateY(-50%)
+}
+
+.back-btn:before,
+.next-btn:after {
+    content: "";
+    position: absolute;
+    width: 5%;
+    aspect-ratio: 1/1;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    background-color: rgba(70, 70, 70, 0.5);
+    border: 0.2vh solid silver;
+}
+
+.back-btn:before {
+    left: -1vw;
+}
+
+.next-btn:after {
+    right: -1vw;
+}
+
+.back-btn:hover,
+.next-btn:hover {
+    transition: 0.5s;
+    background-color: rgba(245, 245, 245, 0.2);
+    cursor: pointer;
+}
+
+.back-btn h3,
+.next-btn h3 {
+    color: lightgray;
+    font-weight: 300;
+    text-decoration: none;
+    user-select: none;
+}
+
+.back-btn:hover h3,
+.next-btn:hover h3 {
+    color: white;
+    transition: 0.5s;
 }

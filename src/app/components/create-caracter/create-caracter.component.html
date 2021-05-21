@@ -1,7 +1,31 @@
+<app-stats-page [faction]='faction' style="display:'none'"></app-stats-page>
+
 <body>
-    <h1 class="faction-title">Choose your Faction</h1>
-    <img src="assetys/images/companions/Aela.png" alt="companions">
-    <img src="assetys/images/companions/Bolund.png" alt="stormcloak">
-    <img src="assetys/images/companions/Ancano.png" alt="thalmor">
-    <img src="assetys/images/companions/Breyna.png" alt="winterhold">
+    <img class="background" src="assets/images/create-background.jpg" alt="background">
+    <div class="title-box">
+        <h2 class="faction-title">Choose your Faction</h2>
+    </div>
+    <div class="factions">
+        <label><input type="radio" name="faction" value="companions"  (click)='getFaction(companions.value)' #companions  >
+        <img class="companions" src="assets/images/factions/companions.png" alt="companions">
+      </label>
+        <label><input type="radio" name="faction" value="stormcloaks" (click)='getFaction(stormcloaks.value)' #stormcloaks>
+        <img class="stormcloaks" src="assets/images/factions/stormcloaks.png" alt="stormcloaks">
+      </label>
+        <label><input type="radio" name="faction" value="thalmor" (click)='getFaction(thalmor.value)' #thalmor>
+        <img class="thalmor" src="assets/images/factions/thalmor.png" alt="thalmor">
+      </label>
+        <label><input type="radio" name="faction" value="winterhold" (click)='getFaction(winterhold.value)' #winterhold>
+        <img class="winterhold" src="assets/images/factions/winterhold.png" alt="winterhold">
+      </label>
+    </div>
+    <div class="description-box">
+        <h3 class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nobis quam accusamus doloribus illum asperiores facere velit non veritatis id eum fuga excepturi tempora laboriosam consequuntur suscipit, voluptates rem accusantium.</h3>
+    </div>
+    <div [routerLink]="['/main-menu']" class="back-btn" tabindex="1">
+        <h3>Back</h3>
+    </div>
+    <div class="next-btn" tabindex="1" (click)='outputTest()'>
+        <h3>Next</h3>
+    </div>
 </body>

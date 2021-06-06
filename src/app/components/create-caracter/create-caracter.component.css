@@ -80,7 +80,8 @@ input[type=radio] {
     filter: drop-shadow(0px 0px 1vw rgb(163, 155, 134));
 }
 
-.companions:hover {
+.companions:hover,
+.companions-choosen {
     filter: drop-shadow(0px 0px 2vw rgb(255, 233, 182));
 }
 
@@ -88,7 +89,8 @@ input[type=radio] {
     filter: drop-shadow(0px 0px 1vw rgb(110, 93, 40));
 }
 
-.stormcloaks:hover {
+.stormcloaks:hover,
+.stormcloaks-choosen {
     filter: drop-shadow(0px 0px 2vw rgb(255, 213, 86));
 }
 
@@ -96,7 +98,8 @@ input[type=radio] {
     filter: drop-shadow(0px 0px 1vw rgb(93, 110, 79));
 }
 
-.thalmor:hover {
+.thalmor:hover,
+.thalmor-choosen {
     filter: drop-shadow(0px 0px 2vw rgb(145, 209, 92));
 }
 
@@ -104,7 +107,8 @@ input[type=radio] {
     filter: drop-shadow(0px 0px 1vw rgb(126, 140, 172));
 }
 
-.winterhold:hover {
+.winterhold:hover,
+.winterhold-choosen {
     filter: drop-shadow(0px 0px 2vw rgb(150, 182, 255));
 }
 

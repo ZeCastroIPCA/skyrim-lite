@@ -16,6 +16,16 @@ export class CreateCaracterComponent implements OnInit {
 
   getFaction(ref:string){
     this.faction = ref
+    console.log(this.faction)
+  }
+
+
+  //search for a solution
+  checkIfChecked(checkbox : HTMLInputElement, coatOfArms : HTMLImageElement) {
+    if (checkbox.checked) {
+        //coatOfArms.style.filter ='drop-shadow(0px 0px 2vw rgb(255, 233, 182))'
+        console.log("checked")
+    }
   }
 
   outputTest() {

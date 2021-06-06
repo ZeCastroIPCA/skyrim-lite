@@ -1,1 +1,43 @@
-<p (click)="outputTest()">teste</p>
+<body>
+    <img class="background" src="assets/images/stats-background.jpg" alt="background">
+    <div class="title-box">
+        <h2 class="faction-title">Create your character</h2>
+    </div>
+    <div class="stats">
+        <div class="sliders">
+            <div class="slider-div">
+                <div class="stats-and-text">
+                    <h2>Health</h2>
+                    <h2>{{healthNum}}</h2>
+                </div>
+                <input [(ngModel)]="healthNum" (input)="inputChangeHealth(health.value)" type="range" min="1" max="100" class="slider" id="myRange" #health>
+            </div>
+            <div class="slider-div">
+                <div class="stats-and-text">
+                    <h2>Strenght</h2>
+                    <h2>{{strenghtNum}}</h2>
+                </div>
+                <input [(ngModel)]="strenghtNum" (input)="inputChangeStreght(strenght.value)" type="range" min="1" max="100" class="slider" id="myRange" #strenght>
+            </div>
+            <div class="slider-div">
+                <div class="stats-and-text">
+                    <h2>Inteligence</h2>
+                    <h2>{{inteligenceNum}}</h2>
+                </div>
+                <input [(ngModel)]="inteligenceNum" (input)="inputChangeInteligence(inteligence.value)" type="range" min="1" max="100" class="slider" id="myRange" #inteligence>
+            </div>
+        </div>
+    </div>
+    <div class="name">
+        <input type="text" placeholder="Insert your name">
+    </div>
+    <div class="side-profile">
+        <img src="assets/images/factions/cha1.png" alt="cha" #character>
+        <img class="cha1" src="assets/images/factions/cha1.png" alt="cha1" (click)="changeCharacter(character, cha1)" #cha1>
+        <img class="cha2" src="assets/images/factions/cha2.png" alt="cha2" (click)="changeCharacter(character, cha2)" #cha2>
+        <img class="cha3" src="assets/images/factions/cha3.png" alt="cha3" (click)="changeCharacter(character, cha3)" #cha3>
+        <img class="cha4" src="assets/images/factions/cha4.png" alt="cha4" (click)="changeCharacter(character, cha4)" #cha4>
+    </div>
+    <button [routerLink]="['/create-caracter']" class="back-btn"><h3>Back</h3></button>
+    <button class="next-btn"><h3>Start</h3></button>
+</body>

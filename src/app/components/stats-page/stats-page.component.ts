@@ -1,3 +1,4 @@
+import { InvokeFunctionExpr } from '@angular/compiler';
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
@@ -15,8 +16,24 @@ export class StatsPageComponent implements OnInit {
 
   }
 
-  outputTest() {
-    console.log(this.faction)
+  healthNum : string = "50"
+  strenghtNum : string = "30"
+  inteligenceNum : string = "20"
+
+  inputChangeHealth(input : string){
+    this.healthNum = input
   }
+
+  inputChangeStreght(input : string){
+    this.strenghtNum = input
+  }
+
+  inputChangeInteligence(input : string){
+    this.inteligenceNum = input
+  }
+
+  changeCharacter(ref : { src: string; }, img : HTMLImageElement){
+    ref.src = 'assets/images/factions/' + img.className + '.png'
+}
 
 }

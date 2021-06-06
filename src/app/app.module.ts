@@ -7,6 +7,7 @@ import { MainMenuComponent } from './components/main-menu/main-menu.component';
 import { CreditsComponent } from './components/credits/credits.component';
 import { CreateCaracterComponent } from './components/create-caracter/create-caracter.component';
 import { StatsPageComponent } from './components/stats-page/stats-page.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { StatsPageComponent } from './components/stats-page/stats-page.component
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

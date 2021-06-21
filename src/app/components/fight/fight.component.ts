@@ -16,10 +16,15 @@ export class FightComponent implements OnInit {
    @ViewChild("playerImg") playerImage : any
    @ViewChild("enemyImg") enemyImage : any
 
+   @ViewChild("playerWeapon") playerWeapon : any
+   @ViewChild("enemyWeapon") enemyWeapon : any
+
   ngOnInit(): void {
     setTimeout(() => {
       this.playerImage.nativeElement.src = this.service.player.img
       this.enemyImage.nativeElement.src = "assets/images/factions/cha" + (Math.floor(Math.random() * 4)+ 1) + ".png"
+      this.playerWeapon.nativeElement.src = this.service.player.weapon
+      this.enemyWeapon.nativeElement.src = "assets/images/weapons/" + (Math.floor(Math.random() * 4)+ 1) + ".png"
       this.getEnemyFaction()
       this.getRandomEnemy()
     }, 200);
@@ -90,10 +95,13 @@ export class FightComponent implements OnInit {
     return result
   }
 
+  time : any
   dead() : boolean{
-    while(this.service.enemy.stats.health > 0 && this.service.player.stats.health > 0) {
-      this.attack()
-    }
+    setInterval(()=> {
+      if(this.service.enemy.stats.health > 0 && this.service.player.stats.health > 0) {
+        this.attack()
+      }
+    },1000);
     return true
   }
 

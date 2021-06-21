@@ -1,0 +1,50 @@
+<body>
+    <img class="background" src="assets/images/fight-background.jpg" alt="background">
+    <img class="title" src="assets/images/title.png" alt="title">
+    <div class="id-box">
+        <input type="text" placeholder="Search for ID" (keyup.enter)="getEnemy(idInput.value || 86)" #idInput>
+    </div>
+    <button class="fight-btn" (click)="dead()"><h3>Start</h3></button>
+    <div class="left">
+        <div class="image">
+            <img src="" alt="player" #playerImg>
+        </div>
+        <div class="weapon first">
+            <img alt="weapon" #playerWeapon>
+        </div>
+        <div class="details">
+            <div class="name">
+                <h1>{{this.skyrim.player.name}}</h1>
+            </div>
+            <div class="faction">
+                <h2>{{this.skyrim.player.faction}}</h2>
+            </div>
+            <div class="stats">
+                <div class="health">
+                    <h2>{{this.skyrim.player.stats.health}}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="image">
+            <img src="" alt="player" #enemyImg>
+        </div>
+        <div class="weapon second">
+            <img alt="weapon" #enemyWeapon>
+        </div>
+        <div class="details">
+            <div class="name">
+                <h1>{{this.skyrim.enemy.name}}</h1>
+            </div>
+            <div class="faction">
+                <h2>{{this.skyrim.enemy.faction}}</h2>
+            </div>
+            <div class="stats">
+                <div class="health">
+                    <h2>{{this.skyrim.enemy.stats.health}}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -14,10 +14,10 @@
             </div>
             <div class="slider-div">
                 <div class="stats-and-text">
-                    <h2>Strenght</h2>
-                    <h2>{{strenghtNum}}</h2>
+                    <h2>Damage</h2>
+                    <h2>{{damageNum}}</h2>
                 </div>
-                <input [(ngModel)]="strenghtNum" (input)="inputChangeStreght(strenght.value)" type="range" min="1" max="100" class="slider" id="myRange" #strenght>
+                <input [(ngModel)]="damageNum" (input)="inputChangeStreght(damage.value)" type="range" min="1" max="100" class="slider" id="myRange" #damage>
             </div>
             <div class="slider-div">
                 <div class="stats-and-text">
@@ -28,8 +28,8 @@
             </div>
         </div>
     </div>
-    <div class="name">
-        <input type="text" placeholder="Insert your name">
+    <div class="name" #nameDiv>
+        <input type="text" placeholder="Insert your name" #name>
     </div>
     <div class="side-profile">
         <img src="assets/images/factions/cha1.png" alt="cha" #character>
@@ -39,5 +39,5 @@
         <img class="cha4" src="assets/images/factions/cha4.png" alt="cha4" (click)="changeCharacter(character, cha4)" #cha4>
     </div>
     <button [routerLink]="['/create-caracter']" class="back-btn"><h3>Back</h3></button>
-    <button class="next-btn"><h3>Start</h3></button>
+    <button class="next-btn" (click)="create(name.value, this.healthNum, this.damageNum, this.inteligenceNum, nameDiv)"><h3>Start</h3></button>
 </body>

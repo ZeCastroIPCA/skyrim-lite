@@ -1,45 +1,18 @@
 <body>
     <img class="main-title" src="assets/images/skyrim-title.png">
-    <div class="menu">
-        <div tabindex="1" class="menu-item">
+    <app-login *ngIf="login != '1'"></app-login>
+    <div class="menu" *ngIf="login == '1'">
+        <div tabindex="1" [routerLink]="['/create-caracter']" class="menu-item">
             <h3>Start Game</h3>
         </div>
-        <div [routerLink]="['/create-caracter']" tabindex="2" class="menu-item">
-            <h3>Create Caracter</h3>
+        <div tabindex="2" class="menu-item">
+            <h3>Training</h3>
         </div>
-        <div tabindex="3" class="menu-item">
-            <h3>Options</h3>
-        </div>
-        <div [routerLink]="['/credits']" tabindex="4" class="menu-item">
+        <div [routerLink]="['/credits']" tabindex="3" class="menu-item">
             <h3>Credits</h3>
         </div>
-
-    </div>
-    <!-- UPDATE NOTES JUST IN CASE
-    <div class="menu-notes">
-        <h3>Update notes:</h3>
-        <div class="menu-notes-text">
-            <p><b>Lorem, ipsum (10.0.1):</b></p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero ullam impedit obcaecati quisquam repellendus laboriosam aspernatur animi, blanditiis aliquid eos quidem, dignissimos sed qui modi cum quibusdam officia dolorem fuga!</p>
-            <p><b>Lorem ipsum dolor sit amet (10.0.2):</b></p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam eum natus dicta a doloremque tempore adipisci qui id porro, repellat dignissimos perspiciatis tempora neque! Eos molestiae perferendis maiores quia atque? Adipisci, corporis
-                earum optio consequatur laudantium, corrupti ex eos possimus, sunt blanditiis esse dolor libero odit. Fugit, suscipit accusamus! Provident quo ad a similique labore illo sequi molestiae cum eveniet. Eum dolores quaerat inventore iste hic,
-                quod obcaecati vel similique labore nulla omnis? Velit, temporibus nostrum? Rem quis deleniti eaque repellat accusamus dolorem quam voluptatibus pariatur odio nisi corrupti, magni laborum amet ex odit excepturi. Ratione, neque molestias?
-                Nostrum, sint?</p>
-            <p><b>Lorem ipsum dolor (10.0.3):</b></p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis in debitis ipsum incidunt possimus inventore alias distinctio doloribus. Nihil explicabo blanditiis, neque ipsam quia delectus distinctio magnam recusandae debitis facere dolore
-                omnis voluptate commodi in odit accusamus laborum deserunt sequi a quas mollitia maiores repellendus. Sunt odit minus ex tempore?</p>
-            <p><b>Lorem, ipsum (10.1.1):</b></p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero ullam impedit obcaecati quisquam repellendus laboriosam aspernatur animi, blanditiis aliquid eos quidem, dignissimos sed qui modi cum quibusdam officia dolorem fuga!</p>
-            <p><b>Lorem ipsum dolor sit amet (10.1.2):</b></p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam eum natus dicta a doloremque tempore adipisci qui id porro, repellat dignissimos perspiciatis tempora neque! Eos molestiae perferendis maiores quia atque? Adipisci, corporis
-                earum optio consequatur laudantium, corrupti ex eos possimus, sunt blanditiis esse dolor libero odit. Fugit, suscipit accusamus! Provident quo ad a similique labore illo sequi molestiae cum eveniet. Eum dolores quaerat inventore iste hic,
-                quod obcaecati vel similique labore nulla omnis? Velit, temporibus nostrum? Rem quis deleniti eaque repellat accusamus dolorem quam voluptatibus pariatur odio nisi corrupti, magni laborum amet ex odit excepturi. Ratione, neque molestias?
-                Nostrum, sint?</p>
-            <p><b>Lorem ipsum dolor (10.2.1):</b></p>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis in debitis ipsum incidunt possimus inventore alias distinctio doloribus. Nihil explicabo blanditiis, neque ipsam quia delectus distinctio magnam recusandae debitis facere dolore
-                omnis voluptate commodi in odit accusamus laborum deserunt sequi a quas mollitia maiores repellendus. Sunt odit minus ex tempore?</p>
-
+        <div tabindex="4" class="menu-item" (click)="closePage()">
+            <h3>Quit</h3>
         </div>
-    </div> -->
+    </div>
 </body>

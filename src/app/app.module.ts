@@ -8,6 +8,10 @@ import { CreditsComponent } from './components/credits/credits.component';
 import { CreateCaracterComponent } from './components/create-caracter/create-caracter.component';
 import { StatsPageComponent } from './components/stats-page/stats-page.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './components/login/login.component';
+import { TrainingComponent } from './components/training/training.component';
+import { FightComponent } from './components/fight/fight.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +19,16 @@ import { FormsModule } from '@angular/forms';
     MainMenuComponent,
     CreditsComponent,
     CreateCaracterComponent,
-    StatsPageComponent
+    StatsPageComponent,
+    LoginComponent,
+    TrainingComponent,
+    FightComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

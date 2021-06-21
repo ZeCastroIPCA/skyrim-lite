@@ -34,6 +34,17 @@ body {
     height: 100vh;
     position: relative;
     background-color: whitesmoke;
+    overflow: hidden;
+}
+
+.background {
+    width: 110%;
+    height: 110%;
+    filter: blur(3px) brightness(0.5);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
 }
 
 
@@ -88,7 +99,8 @@ a {
 /* buttons */
 
 .back-btn,
-.next-btn {
+.next-btn,
+.fight-btn {
     position: absolute;
     width: 10%;
     height: 5%;
@@ -102,7 +114,9 @@ a {
 }
 
 .back-btn:before,
-.next-btn:after {
+.next-btn:after,
+.fight-btn:before,
+.fight-btn:after {
     content: "";
     position: absolute;
     width: 5%;
@@ -113,23 +127,27 @@ a {
     border: 0.2vh solid silver;
 }
 
-.back-btn:before {
-    left: -1vw;
+.back-btn:before,
+.fight-btn:before {
+    left: -8%;
 }
 
-.next-btn:after {
-    right: -1vw;
+.next-btn:after,
+.fight-btn::after {
+    right: -8%;
 }
 
 .back-btn:hover,
-.next-btn:hover {
+.next-btn:hover,
+.fight-btn:hover {
     transition: 0.5s;
     background-color: rgba(245, 245, 245, 0.2);
     cursor: pointer;
 }
 
 .back-btn h3,
-.next-btn h3 {
+.next-btn h3,
+.fight-btn h3 {
     color: lightgray;
     font-weight: 300;
     text-decoration: none;
@@ -137,7 +155,8 @@ a {
 }
 
 .back-btn:hover h3,
-.next-btn:hover h3 {
+.next-btn:hover h3,
+.fight-btn:hover h3 {
     color: white;
     transition: 0.5s;
 }

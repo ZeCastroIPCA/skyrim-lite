@@ -1,0 +1,16 @@
+<div class="login">
+    <div class="title">
+        <h2>Login / Register</h2>
+    </div>
+    <div class="inputs">
+        <div class="user"><input type="text" #name placeholder="Username"></div>
+        <div class="pass"><input type="password" #pass placeholder="Password"></div>
+    </div>
+    <div class="error" [ngClass]="{'error-none': failed == false}">
+        <p>Login Failed! Try again.</p>
+    </div>
+    <div class="buttons">
+        <button (click)="register(name.value, pass.value)">Register</button>
+        <button (click)="login(name.value, pass.value)">Login</button>
+    </div>
+</div>

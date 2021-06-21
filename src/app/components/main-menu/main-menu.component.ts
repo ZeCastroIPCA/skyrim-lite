@@ -12,4 +12,10 @@ export class MainMenuComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  login = localStorage.getItem("login")
+
+  closePage(){
+    window.close()
+  }
+
 }

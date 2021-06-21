@@ -1,5 +1,5 @@
-import { InvokeFunctionExpr } from '@angular/compiler';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { SkyrimService } from 'src/app/services/skyrim.service';
 
 @Component({
   selector: 'app-stats-page',
@@ -8,16 +8,15 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class StatsPageComponent implements OnInit {
 
-  constructor() { }
-
-  @Input() faction : string = ''
+  constructor(private service : SkyrimService) {
+   }
 
   ngOnInit(): void {
 
   }
 
   healthNum : string = "50"
-  strenghtNum : string = "30"
+  damageNum : string = "30"
   inteligenceNum : string = "20"
 
   inputChangeHealth(input : string){
@@ -25,7 +24,7 @@ export class StatsPageComponent implements OnInit {
   }
 
   inputChangeStreght(input : string){
-    this.strenghtNum = input
+    this.damageNum = input
   }
 
   inputChangeInteligence(input : string){
@@ -34,6 +33,30 @@ export class StatsPageComponent implements OnInit {
 
   changeCharacter(ref : { src: string; }, img : HTMLImageElement){
     ref.src = 'assets/images/factions/' + img.className + '.png'
-}
+    this.service.player.img = ref.src
+  }
 
+  create(name : string, damage : string, inteligence : string, health : string, input : HTMLDivElement) {
+    let user : string = localStorage.getItem("user")
+    let pass : string = localStorage.getItem("pass")
+    if(name != "") {
+      this.service.createFuncion(name, health, damage, inteligence, user, pass).subscribe((x) => {
+        if (x['code'] == 200) {
+          console.log(x)
+        }
+      });
+    } else {
+      input.style.animation="shake-lr 0.7s cubic-bezier(0.455, 0.030, 0.515, 0.955) both"
+      setTimeout(() => {
+        input.style.animation="none"
+      }, 700);
+    }
+    this.service.player.health = this.healthNum
+    this.service.player.damage = this.damageNum
+    this.service.player.inteligence = this.inteligenceNum
+
+    localStorage.setItem('health', this.service.player.health)
+    localStorage.setItem('damage', this.service.player.damage)
+    localStorage.setItem('inteligence', this.service.player.inteligence)
+  }
 }

@@ -127,55 +127,7 @@ body {
 /* id input */
 
 .id-box {
-    width: 15%;
-    aspect-ratio: 6/1;
-    left: 50%;
     top: 70%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 0.2vh solid silver;
-    background-color: rgba(70, 70, 70, 0.5);
-    position: absolute;
-    z-index: 1;
-}
-
-.id-box:before,
-.id-box:after {
-    content: "";
-    position: absolute;
-    width: 4%;
-    aspect-ratio: 1/1;
-    top: 50%;
-    transform: translateY(-50%) rotate(45deg);
-    background-color: rgba(70, 70, 70, 0.5);
-    border: 0.2vh solid silver;
-}
-
-.id-box:before {
-    left: -7%;
-}
-
-.id-box:after {
-    right: -7%;
-}
-
-.id-box input {
-    width: 100%;
-    height: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
-    background-color: transparent;
-    outline: none;
-    border: 0;
-    font-size: 1.5vw;
-    color: silver;
-}
-
-.id-box input::placeholder {
-    color: silver;
 }
 
 .fight-btn {
@@ -212,4 +164,15 @@ body {
 
 .second {
     left: 25%;
+}
+
+
+/* arrow */
+
+.arrow {
+    position: absolute;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 10%;
 }

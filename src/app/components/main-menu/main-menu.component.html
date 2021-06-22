@@ -5,13 +5,16 @@
         <div tabindex="1" [routerLink]="['/create-caracter']" class="menu-item">
             <h3>Start Game</h3>
         </div>
-        <div tabindex="2" class="menu-item">
+        <div tabindex="2" [routerLink]="['/fight']" class="menu-item">
+            <h3>Fight</h3>
+        </div>
+        <div tabindex="3" [routerLink]="['/training']" class="menu-item">
             <h3>Training</h3>
         </div>
-        <div [routerLink]="['/credits']" tabindex="3" class="menu-item">
-            <h3>Credits</h3>
+        <div [routerLink]="['/options']" tabindex="4" class="menu-item">
+            <h3>Options</h3>
         </div>
-        <div tabindex="4" class="menu-item" (click)="closePage()">
+        <div tabindex="5" class="menu-item" (click)="closePage()">
             <h3>Quit</h3>
         </div>
     </div>

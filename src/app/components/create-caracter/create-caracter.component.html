@@ -1,24 +1,24 @@
 <body>
     <img class="background" src="assets/images/create-background.jpg" alt="background">
     <div class="title-box">
-        <h2 class="faction-title">Choose your Faction</h2>
+        <h2 class="faction-title">Choose your Weapon</h2>
     </div>
     <div class="factions">
-        <label tabindex="1"><input type="radio" name="faction" value="Companions" #companions (click)='getFaction(companions.value)'>
-        <img class="companions" src="assets/images/factions/companions.png" alt="companions" [ngClass]="companions.checked ? 'companions-choosen' : 'companions'">
+        <label tabindex="1"><input type="radio" name="faction" (click)='getFaction(axe)' #axeInput>
+        <img class="companions" src="assets/images/weapons/1.png" alt="axe" #axe [ngClass]="axeInput.checked ? 'companions-choosen' : 'companions'">
       </label>
-        <label tabindex="2"><input type="radio" name="faction" value="Stormcloaks" (click)='getFaction(stormcloaks.value)' #stormcloaks>
-        <img class="stormcloaks" src="assets/images/factions/stormcloaks.png" alt="stormcloaks" [ngClass]="stormcloaks.checked ? 'stormcloaks-choosen' : 'stormcloaks'">
+        <label tabindex="2"><input type="radio" name="faction" (click)='getFaction(dagger)' #daggerInput>
+        <img class="stormcloaks" src="assets/images/weapons/2.png" alt="dagger" #dagger [ngClass]="daggerInput.checked ? 'stormcloaks-choosen' : 'stormcloaks'">
       </label>
-        <label tabindex="3"><input type="radio" name="faction" value="Thalmor" (click)='getFaction(thalmor.value)' #thalmor>
-        <img class="thalmor" src="assets/images/factions/thalmor.png" alt="thalmor" [ngClass]="thalmor.checked ? 'thalmor-choosen' : 'thalmor'">
+        <label tabindex="3"><input type="radio" name="faction" (click)='getFaction(mace)' #maceInput>
+        <img class="thalmor" src="assets/images/weapons/3.png" alt="mace" #mace [ngClass]="maceInput.checked ? 'thalmor-choosen' : 'thalmor'">
       </label>
-        <label tabindex="4"><input type="radio" name="faction" value="Winterhold" (click)='getFaction(winterhold.value)' #winterhold>
-        <img class="winterhold" src="assets/images/factions/winterhold.png" alt="winterhold" [ngClass]="winterhold.checked ? 'winterhold-choosen' : 'winterhold'">
+        <label tabindex="4"><input type="radio" name="faction"(click)='getFaction(sword)' #swordInput>
+        <img class="winterhold" src="assets/images/weapons/4.png" alt="sword" #sword [ngClass]="swordInput.checked ? 'winterhold-choosen' : 'winterhold'">
       </label>
     </div>
     <div class="description-box">
-        <h3 class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus nobis quam accusamus doloribus illum asperiores facere velit non veritatis id eum fuga excepturi tempora laboriosam consequuntur suscipit, voluptates rem accusantium.</h3>
+        <h3 class="description">Each weapon alters different stats. You don't know what it changes, so we make this entertaining. Choose wisely!</h3>
     </div>
     <div [routerLink]="['/main-menu']" class="back-btn" tabindex="5">
         <h3>Back</h3>

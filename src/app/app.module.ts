@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { TrainingComponent } from './components/training/training.component';
 import { FightComponent } from './components/fight/fight.component';
+import { OptionsComponent } from './components/options/options.component';
+import { ShowdownComponent } from './components/fight/showdown/showdown.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { FightComponent } from './components/fight/fight.component';
     StatsPageComponent,
     LoginComponent,
     TrainingComponent,
-    FightComponent
+    FightComponent,
+    OptionsComponent,
+    ShowdownComponent
   ],
   imports: [
     BrowserModule,

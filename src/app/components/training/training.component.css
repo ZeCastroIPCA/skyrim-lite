@@ -1,0 +1,36 @@
+.next-btn,
+.back-btn {
+    width: 20%;
+    height: 10%;
+    left: 70%;
+    top: 70%;
+}
+
+.back-btn {
+    left: 30%;
+}
+
+h1,
+h2,
+h3 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-weight: 300;
+    left: 50%;
+}
+
+h1 {
+    top: 30%;
+    font-size: 5vw;
+}
+
+h2 {
+    top: 45%;
+    font-size: 3vw;
+}
+
+h3 {
+    top: 55%;
+    font-size: 2.25vw;
+}

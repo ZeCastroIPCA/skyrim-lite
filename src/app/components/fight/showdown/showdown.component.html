@@ -1,0 +1,5 @@
+<div class="showdown">
+    <h1>The winner is {{this.skyrim.score}}!</h1>
+    <button class="back-btn" [routerLink]="['/fight']" (click)="reloadPage()"><h3>Fight Again</h3></button>
+    <button class="next-btn" [routerLink]="['/main-menu']" routerLinkActive="router-link-active"><h3>Main Menu</h3></button>
+</div>

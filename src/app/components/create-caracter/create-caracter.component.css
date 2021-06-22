@@ -57,7 +57,7 @@ input[type=radio] {
 }
 
 .factions img {
-    width: 80%;
+    width: 70%;
     transition: 0.5s;
 }
 
@@ -139,6 +139,7 @@ input[type=radio] {
     padding-right: 10%;
     color: lightgray;
     font-weight: 300;
+    text-align: center;
 }
 
 

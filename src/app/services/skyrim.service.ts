@@ -8,17 +8,19 @@ export class SkyrimService {
 
   constructor(private http : HttpClient) { }
 
+  score : string = ""
+
   player : any = {
     id: "",
     name: "ze",
-    faction: "Companions",
+    faction: "",
     stats: {
       health: 100,
       damage: 100,
       inteligence: 100
     },
     img: "assets/images/factions/cha2.png",
-    weapon: "assets/images/weapons/2.png"
+    weapon: ""
   }
 
   enemy : any = {

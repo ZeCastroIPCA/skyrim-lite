@@ -1,16 +1,18 @@
 <body>
     <img class="background" src="assets/images/fight-background.jpg" alt="background">
     <img class="title" src="assets/images/title.png" alt="title">
+    <router-outlet *ngIf='this.skyrim.score != ""'></router-outlet>
+    <img src="assets/images/arrow.png" alt="arrow" class="arrow" #arrow>
     <div class="id-box">
         <input type="text" placeholder="Search for ID" (keyup.enter)="getEnemy(idInput.value || 86)" #idInput>
     </div>
-    <button class="fight-btn" (click)="dead()"><h3>Start</h3></button>
+    <button class="fight-btn" (click)="dead()" [routerLink]="['/fight', this.skyrim.score]"><h3>Start</h3></button>
     <div class="left">
         <div class="image">
             <img src="" alt="player" #playerImg>
         </div>
         <div class="weapon first">
-            <img alt="weapon" #playerWeapon>
+            <img alt="nao sei como buscar esta imagem (queria guardar na bd)" #playerWeapon>
         </div>
         <div class="details">
             <div class="name">

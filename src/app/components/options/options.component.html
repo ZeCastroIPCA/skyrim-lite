@@ -1,0 +1,18 @@
+<body>
+    <img class="background" src="assets/images/options-background.jpg">
+    <h1 class="options">Options</h1>
+    <div class="left">
+        <h2 class="option1">Delete Character</h2>
+        <div class="id-box">
+            <input type="text" (keyup.enter)="deleteID(del, confirm)" #del placeholder="ID to delete">
+        </div>
+        <h3 class="confirm" #confirm></h3>
+    </div>
+    <div class="right">
+        <h2 class="option2">Watch Credits</h2>
+        <div class="credits">
+            <button [routerLink]="['/credits']" class="back-btn next-btn credits-btn"><h3>Credits</h3></button>
+        </div>
+    </div>
+    <button [routerLink]="['/main-menu']" class="back-btn btn"><h3>Back</h3></button>
+</body>

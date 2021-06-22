@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { SkyrimService } from 'src/app/services/skyrim.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { SkyrimService } from 'src/app/services/skyrim.service';
 })
 export class StatsPageComponent implements OnInit {
 
-  constructor(private service : SkyrimService) {
+  constructor(private service : SkyrimService, private route : Router) {
    }
 
   ngOnInit(): void {
@@ -43,6 +44,7 @@ export class StatsPageComponent implements OnInit {
       this.service.createFuncion(name, health, damage, inteligence, user, pass).subscribe((x) => {
         if (x['code'] == 200) {
           console.log(x)
+          this.route.navigate(["/fight"])
         }
       });
     } else {
@@ -58,5 +60,6 @@ export class StatsPageComponent implements OnInit {
     localStorage.setItem('health', this.service.player.health)
     localStorage.setItem('damage', this.service.player.damage)
     localStorage.setItem('inteligence', this.service.player.inteligence)
+    this.service.updateFuncion(name, health, damage, inteligence, user, pass)
   }
 }

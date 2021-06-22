@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    flex-direction: row;
+}
+
+.options {
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    font-weight: 300;
+    font-size: 3vw;
+    color: whitesmoke;
+}
+
+.left,
+.right {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+.left h2,
+.right h2 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 300;
+    color: whitesmoke;
+}
+
+.id-box {
+    width: 30%;
+}
+
+.confirm {
+    position: absolute;
+    display: none;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    left: 10%;
+    top: 90%;
+}
+
+.credits-btn {
+    width: 30%;
+    left: 50%;
+    top: 50%;
+}
